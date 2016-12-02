@@ -94,7 +94,7 @@ module MiniMagick
       end
 
       def raw(value)
-        @info["raw:#{value}"] ||= identify { |b| b.format(value) }
+        @info["raw:#{value}"] ||= identify { |b| b.format("'#{value}'") }
       end
 
       def signature
